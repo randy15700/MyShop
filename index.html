@@ -1,150 +1,182 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>accueil</title>
 </head>
+
 <body>
-   
+
     <header>
         <h1>My Shop</h1>
         <p>Chez nous, on expédie plus vite qu' un pet sur une plaque de verglas!</p>
 
-
-        <ul>
-            <li>
-                <a href="index.html">accueil</a> 
-            </li>
-            <li>
-                <a href="pages/about.html">à-propos</a>
-            </li>
-            <li>
-                <a href="pages/products.html">produits</a>
-            </li>
-            <li>
-                <a href="pages/SignUp.html">inscription</a>
-            </li>
-            <li>
-                <a href="pages/SignIn.html">connexion</a>
-            </li>
-            <li>
-                <a href="pages/contact.html">contact</a>
-            </li>
-            <li>
-                <a href="pages/cart.html">Panier</a>
-            </li>
-        </ul>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">accueil</a>
+                </li>
+                <li>
+                    <a href="pages/about.html">à-propos</a>
+                </li>
+                <li>
+                    <a href="pages/products.html">produits</a>
+                </li>
+                <li>
+                    <a href="pages/SignUp.html">inscription</a>
+                </li>
+                <li>
+                    <a href="pages/SignIn.html">connexion</a>
+                </li>
+                <li>
+                    <a href="pages/contact.html">contact</a>
+                </li>
+                <li>
+                    <a href="pages/cart.html">Panier</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h2>Bienvenue sur notre boutique</h2>
-    
-        <p>My Shop est une boutique de vente en ligne. <br>
-           Découvrez nos robes, chemises, jeans et accessoires tendance et profitez de nos promotions. 
-        </p>
-
-        <h2>Catégories</h2>
-        <ol>
-            <li>Femmes</li>
-            <li>Hommes</li>
-            <li>Enfants</li>
+        <section>
+           
+            <h2>Bienvenue sur notre boutique</h2>
             
-        </ol>
+            <p>Bienvenue sur <strong>My Shop</strong>, la seule taverne en ligne où l'on ne sert pas de la piquette,
+            mais le fleuron des produits dérivés de <em>Kaamelott</em>!</p>
+            
+        </section>
 
-        <!-- liste de définitions -->
-        <!-- <dl> -->
+        <section>
+            <h2>Catégories</h2>
+            <ol>
+                <li>Femmes</li>
+                <li>Hommes</li>
+                <li>Enfants</li>
+
+            </ol>
+
+            <!-- liste de définitions -->
+            <!-- <dl> -->
             <!-- <dt>HTML</dt> -->
             <!-- <dd>language utilisé pour structurer une page web</dd> -->
             <!-- <dt>CSS</dt> -->
             <!-- <dd>Language utilisé pour mettre en forme une page</dd> -->
-        <!-- </dl> -->
-    
-        <h2>Nos Produits</h2>
-    
-        <h3>médaillon d' Ogma</h3>
-            <img src="assets/images/médaillon d'ogma.webp" alt="médaillon d'ogma" style="width: 300px;">
-            <p>Médaillon magique de notre souverain, rain rain!</p>
-            <p>prix 20 &#8364</p>
-            <button type="button">acheter</button>
+            <!-- </dl> -->
+        </section>
+        <section>
+            <h2>Nos Produits</h2>
 
-        <h3>Bavoir</h3>
-            <img src="assets/images/bavoir couillère.webp" alt="Bavoir couillère" style="width: 300px;">
-            <p>Votre enfant a failli s' étouffer avec un os de caille et a gerbé partout, on a ce qu' il lui faut!</p>
-            <p>prix 10 &#8364</p>
-            <button type="button">acheter</button>
+            <article>
+                <h3>médaillon d' Ogma</h3>
+                <img src="assets/images/medaillon-ogma.webp" alt="médaillon d'ogma" style="width: 300px;">
+                <p>Médaillon magique de notre souverain, rain rain!</p>
+                <p>prix 20 e </p>
+                <button type="button">acheter</button>
+            </article>
 
-        <h3>Graal</h3>
-            <img src="assets/images/graal.webp" alt="graal" style="width: 300px;">
-            <p>Non, le graal n' est ni un bocal à anchois, ni une pierre incandescante, mais bien un verre à bière.</p>
-            <p>prix 15 &#8364</p>
-            <button type="button">acheter</button>
+            <article>
+                <h3>Bavoir</h3>
+                <img src="assets/images/bavoir-couillère.webp" alt="Bavoir couillère" style="width: 300px;">
+                <p>Votre enfant a failli s' étouffer avec un os de caille et a gerbé partout, on a ce qu' il lui faut!
+                </p>
+                <p>prix 10 e </p>
+                <button type="button">acheter</button>
+            </article>
 
-    
-            <table border="1">
-                <tr>
-                    <td>Catégories</td>
-                    <td>Produit</td>
-                    <td>Image</td>
-                    <td>Description</td>
-                    <td>Prix</td>
-                    <td>Action</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Hommes</td>
-                    <td>médaillon d' Ogma</td>
-                    <td>
-                        <img src="assets/images/médaillon d'ogma.webp" alt="médaillon d'ogma" style="width: 100px;">
-                    </td>
-                    <td>Médaillon magique de notre souverain, rain rain!</td>
-                    <td>20 &#8364</td>
-                    <td>
-                        <button type="button">acheter</button>
-                    </td>
-                </tr>
+            <article>
+                <h3>Graal</h3>
+                <img src="assets/images/graal.webp" alt="graal" style="width: 300px;">
+                <p>Non, le graal n' est ni un bocal à anchois, ni une pierre incandescante, mais bien un verre à bière.
+                </p>
+                <p>prix 15 e </p>
+                <button type="button">acheter</button>
+            </article>
 
-                <tr>
-                    <td>Graal</td>
-                    <td><img src="assets/images/graal.webp" alt="graal" style="width: 100px;"></td>
-                    <td>Non, le graal n' est ni un bocal à anchois, ni une pierre incandescante, mais bien un verre à bière.</td>
-                    <td>15 &#8364</td>
-                    <td>
-                        <button type="button">acheter</button>
-                    </td>
-                </tr>
+            <table>
+                <caption>Liste des produits</caption>
+                <thead>
+                    <tr>
+                        <th>Catégories</th>
+                        <th>Produit</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                        <th>Prix</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2">Hommes</td>
+                        <td>médaillon d' Ogma</td>
+                        <td>
+                            <img src="assets/images/medaillon-ogma.webp" alt="médaillon d'ogma" style="width: 100px;">
+                        </td>
+                        <td>Médaillon magique de notre souverain, rain rain!</td>
+                        <td>20 e </td>
+                        <td>
+                            <button type="button">acheter</button>
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td>Enfants</td>
-                    <td>Bavoir</td>
-                    <td><img src="assets/images/bavoir couillère.webp" alt="Bavoir couillère" style="width: 100px;"></td>
-                    <td>Votre enfant a failli s' étouffer avec un os de caille et a gerbé partout, on a ce qu' il lui faut!</td>
-                    <td>10 &#8364</td>
-                    <td>
-                        <button type="button">acheter</button>
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>promotion</td>
-                    <td colspan="5">-20% sur tous les articles</td>
-                </tr>
+                    <tr>
+                        <td>Graal</td>
+                        <td><img src="assets/images/graal.webp" alt="graal" style="width: 100px;"></td>
+                        <td>Non, le graal n' est ni un bocal à anchois, ni une pierre incandescante, mais bien un verre
+                            à
+                            bière.</td>
+                        <td>15 e </td>
+                        <td>
+                            <button type="button">acheter</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Enfants</td>
+                        <td>Bavoir</td>
+                        <td><img src="assets/images/bavoir-couillère.webp" alt="Bavoir couillère" style="width: 100px;">
+                        </td>
+                        <td>Votre enfant a failli s' étouffer avec un os de caille et a gerbé partout, on a ce qu' il lui faut! </td>
+                        <td>10 e </td>
+                        <td>
+                            <button type="button">acheter</button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>promotion</td>
+                        <td colspan="5">-20% sur tous les accessoires</td>
+                    </tr>
+                </tbody>
             </table>
+        </section>
+
+        <aside>
+
+            <h2>Promotion</h2>
+            <p><mark>-20% sur tous les accessoires !</mark></p>
+        </aside>
     </main>
 
     <footer>
-        <a target="_blank" href="https://x.com/"><img src="assets/images/logo x.png" alt=" lien X"></a>
-        <a target="_blank" href="https://www.instagram.com/"><img src="assets/images/logo insta.png"
-            alt="lien instagram"></a>
-        <a target="_blank" href="https://facebook.com" > <img src="assets/images/logo-facebook.png" style="width: 100px;" alt="lien facebook"></a>
-        <a href="mailto:myshop@gmail.com">&#x2709 myshop@gmail.com</a>
-        <a href="tel:+33611111111">&#9742  0611111111</a>
-        <a href="assets/pdf/Mentions légales.pdf" download >Mentions légales</a>
+        <a target="_blank" href="https://x.com/"><img src="assets/images/logo-x.png" alt=" lien X"></a>
+        <a target="_blank" href="https://www.instagram.com/"><img src="assets/images/logo-insta.png"
+                alt="lien instagram"></a>
+        <a target="_blank" href="https://facebook.com"> <img src="assets/images/logo-facebook.png" style="width: 100px;"
+                alt="lien facebook"></a>
+        <a href="mailto:myshop@gmail.com">&#x2709; myshop@gmail.com</a>
+        <a href="tel:+33611111111">&#9742; 0611111111</a>
+        <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
 
         © 2026 My Shop - Tous droits réservés.
 
 
     </footer>
-    
-    
+
+
 </body>
+
 </html>
