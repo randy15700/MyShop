@@ -1,4 +1,122 @@
-#products{
-    color: red;
-    font-weight: 900;
+header , footer{
+    background-color: rgba(1, 1, 0, 0.974);
+    color:rgba(150, 80, 0, 0.9) ;
+    text-align: center;
+    padding: 20px;
+}
+
+header a , footer a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+header ul{
+    list-style: none;
+}
+
+img{
+    width: 250px;
+    height: 250px;
+}
+
+table img{
+     width: 100px;
+    height: 100px;
+}
+
+.intro-index{
+    border: 1px solid goldenrod;
+    padding: 20px;
+    margin: 20px;
+}
+
+section{
+    margin: 20px;
+    
+}
+
+/* formulaires */
+
+form{
+    background-color: black;
+    color: rgba(150, 80, 0, 0.9) ;
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid gray;
+    border-radius:15px ;
+    text-align: center;
+}
+
+form fieldset{
+     border: 1px solid gray;
+     padding: 50px;
+     margin-bottom: 20px;
+     border-radius: 4px;
+
+}
+
+form legend{
+    font-weight: 600;
+    padding: 5px;
+}
+
+form div{
+padding-bottom: 20px;
+}
+
+form label{
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.fieldset-perso input, form select, form textarea{
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 4px;
+}
+
+#nom{
+    border: 2px dashed red;
+}
+
+.info-sup input{
+    margin-right: 5px ;
+}
+button{
+    background-color: rgba(150, 80, 0, 0.9);
+    color: white;
+    padding: 5px 15px 5px 15px;
+    border-radius: 120px 120px 120px 120px / 95px 95px 95px 95px;;
+    cursor: pointer;
+}
+
+/* produits */
+
+article{
+    width: 350px;
+    height: 500px;
+    padding: 20px;
+    margin: 20px;
+    background-color: black;
+    color: rgba(150, 80, 0, 0.9);
+    border-radius: 10px;
+    text-align: center;
+
+}
+
+.price{
+    color: brown;
+    font-weight: bolder;
+
+}
+
+article img{
+    border: 1px solid burlywood;
+    border-radius: 10px;
+}
+
+article strong{
+    color: yellow;
 }
