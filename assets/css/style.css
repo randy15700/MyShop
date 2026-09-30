@@ -1,6 +1,20 @@
+/* selecteur universel : tout le html de la page */
+*{
+    margin: 0;
+    padding: 0;
+    /* gérer correctement la taille : fixe la largeur définie, sans rajouter le padding et border en plus */
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+}
+
 header , footer{
     background-color: rgba(1, 1, 0, 0.974);
     color:rgba(150, 80, 0, 0.9) ;
+    
     text-align: center;
     padding: 20px;
 }
@@ -14,15 +28,21 @@ header ul{
     list-style: none;
 }
 
+/* main */
+
 img{
     width: 250px;
     height: 250px;
 }
 
-table img{
-     width: 100px;
-    height: 100px;
+
+
+main{
+    max-width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
 }
+
 
 .intro-index{
     border: 1px solid goldenrod;
@@ -31,8 +51,41 @@ table img{
 }
 
 section{
-    margin: 20px;
     
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color:rgba(223, 223, 223, 0.725);
+    border-radius: 10px ;
+    
+}
+
+/* main categories */
+
+.categories{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.categories div{
+    width: 150px;
+    height: auto;
+    margin: 20px;
+    border: 2px solid gray;
+    background-color: black;
+    color: rgba(150, 80, 0, 0.9);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.categories div img{
+    width: 146px;
+    height: 145px;
+    border-radius: 7px 7px 0px 0px;
+   
+}
+.categories p{
+    padding: 10px;
 }
 
 /* formulaires */
@@ -70,6 +123,11 @@ form label{
     padding-bottom: 20px;
 }
 
+.fieldset-perso label , #label-pays{
+    display: block;
+    margin-bottom: 10px;
+}
+
 .fieldset-perso input, form select, form textarea{
     width: 100%;
     padding: 7px;
@@ -84,19 +142,87 @@ form label{
 .info-sup input{
     margin-right: 5px ;
 }
+
+/* boutons */
+
 button{
     background-color: rgba(150, 80, 0, 0.9);
     color: white;
     padding: 5px 15px 5px 15px;
+    margin: 15px 0;
     border-radius: 120px 120px 120px 120px / 95px 95px 95px 95px;;
     cursor: pointer;
+    border: none;
+}
+
+button:hover{
+    background-color: darkgoldenrod;
+    font-size: 15px;
+}
+
+button:focus{
+    background-color: olive;
+}
+
+button:active{
+    border : 2px solid grey;
+    font-size: 10px;
+}
+
+/* tableaux */
+
+.table-container{
+    border: 2px solid grey;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+table{
+    border-collapse: collapse ;
+    width: 100%;   
+}
+
+th, td{
+    border: 2px solid grey;
+    text-align: center;
+    padding: 5px;
+    
+}
+thead{
+    background-color: black;
+    color:rgba(150, 80, 0, 0.9) ;
+    
+}
+
+table img{
+     width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+/* input / textarea*/
+
+input:focus{
+    border: 2px solid saddlebrown;
+    outline: none;
+    font-size: 15px;
+}
+textarea:focus{
+    border: 2px solid saddlebrown;
+    outline: none;
+    font-size: 15px;
 }
 
 /* produits */
 
+.product-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 article{
-    width: 350px;
-    height: 500px;
+    max-width: 300px;
+    height: auto;
     padding: 20px;
     margin: 20px;
     background-color: black;
@@ -106,17 +232,88 @@ article{
 
 }
 
+article h3{
+    margin: 10px 0;
+    color: rgb(192, 180, 149);
+    font-size: x-large;
+    font-weight: bold;
+}
+
+article p{
+    margin: 10px 0;
+}
+
 .price{
     color: brown;
-    font-weight: bolder;
+    font-weight: 900;
+    font-size: large;
 
 }
 
 article img{
     border: 1px solid burlywood;
     border-radius: 10px;
+    padding: 5px;
+    width: 200px;
+    height: 200px;
 }
 
-article strong{
+article p span{
     color: yellow;
+    font-size: 20px;
+    font-weight: bolder;
 }
+
+/* footer */
+
+footer{
+    padding: 50px;
+}
+
+.container-footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-footer div{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+footer i{
+    color:rgba(150, 80, 0, 0.9) ;
+    font-size: 30px;
+    
+}
+
+footer a{
+    padding: 10px;
+    font-size: 20px;
+    color: rgba(150, 80, 0, 0.9);
+}
+
+footer p{
+    padding: 10px;
+}
+
+i:hover{
+    color:darkgoldenrod ;
+}
+
+i:active{
+    color: olive;
+    font-size: 25px;
+}
+
+a:hover{
+    color: darkgoldenrod;
+    text-decoration: underline;
+}
+
+a:focus{
+    color: olive;
+    border: 1px solid olive;
+    font-size: 15px;
+}
+
