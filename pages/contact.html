@@ -4,17 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contactez nous">
     <title>contact</title>
+    <!-- lien font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
 
 </head>
 
 <body>
     <header>
-        <h1>My Shop</h1>
-        <p>Chez nous, on expédie plus vite qu' un pet sur une plaque de verglas!</p>
-
+        <div>
+            <h1>My Shop</h1>
+            <p>Chez nous, on expédie plus vite qu' un pet sur une plaque de verglas!</p>
+        </div>
         <nav>
             <ul class="nav">
                 <li>
@@ -46,7 +51,7 @@
 
         <section>
 
-            <form action="">
+            <form action="" id="formContact">
 
                 <h2> Pour nous contacter, envoyez-nous le pigeon voyageur ci-dessous!</h2>
                 <p>(Si il est pas trop naze, il devrait arriver à l' heure!)</p>
@@ -72,16 +77,28 @@
         </section>
     </main>
 
-    <footer>
-        <a target="_blank" href="https://x.com/"><i class="fa-brands fa-square-x-twitter"></i></a>
-        <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
-        <a target="_blank" href="https://facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
-        <a href="mailto:myshop@gmail.com"><i class="fa-solid fa-square-envelope"></i></i> myshop@gmail.com</a>
-        <a href="tel:+33611111111"><i class="fa-solid fa-square-phone"></i> 0611111111</a>
-        <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+    <footer class="container-footer">
+        <div class="link-icons">
+            <a target="_blank" href="https://x.com/" aria-label="lien X"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a target="_blank" href="https://www.instagram.com/" aria-label="lien Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a target="_blank" href="https://facebook.com" aria-label="lien Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+        <div>
+            <a href="mailto:myshop@gmail.com"><i class="fa-solid fa-square-envelope"></i>myshop@gmail.com</a>
+            <a href="tel:+33611111111"><i class="fa-solid fa-square-phone"></i> 0611111111</a>
+            <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        </div>
+        <div>
+            <p>© 2026 My Shop - Tous droits réservés.</p>
+        </div>
 
-        © 2026 My Shop - Tous droits réservés.
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../assets/js/service/msgService.js"></script>
+    <script src="../assets/js/contact.js"></script>
+
 </body>
 
 </html>

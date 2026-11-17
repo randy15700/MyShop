@@ -1,0 +1,49 @@
+{
+  "produits": [
+    {
+      "nom": "Médaillon d' Ogma",
+      "description": "Médaillon magique de notre souverain, rain rain!",
+      "prix": "26",
+      "imgURL": "assets/images/medaillon-ogma.jpg",
+      "id": "h5UxdQtSW1o"
+    },
+    {
+      "nom": "Graal",
+      "description": "Non, le Graal n' est ni un bocal à anchois, ni une pierre incandescente, mais bien un verre à bière.",
+      "prix": "15",
+      "imgURL": "assets/images/graal.webp",
+      "id": "H3mQESTth1c"
+    }
+  ],
+  "messages": [
+    {
+      "nom": "arthur",
+      "email": "lesanglier@cornouaille.kaa",
+      "message": "Coucou",
+      "id": "Ao2wXlzLJCk"
+    }
+  ],
+  "cart": [
+    {
+      "produitID": "h5UxdQtSW1o",
+      "quantite": 1,
+      "id": "6A3V5Y4d6Go"
+    },
+    {
+      "produitID": "h5UxdQtSW1o",
+      "quantite": 1,
+      "id": "JHUGCqbM_NU"
+    },
+    {
+      "produitID": "h5UxdQtSW1o",
+      "quantite": 1,
+      "id": "7W95x0o18S4"
+    },
+    {
+      "produitID": "H3mQESTth1c",
+      "quantite": 1,
+      "id": "FviYl7GWsrQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

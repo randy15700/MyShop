@@ -1,212 +1,291 @@
 /* selecteur universel : tout le html de la page */
-*{
+* {
     margin: 0;
     padding: 0;
     /* gérer correctement la taille : fixe la largeur définie, sans rajouter le padding et border en plus */
     box-sizing: border-box;
 }
 
-body{
+@font-face {
+    font-family: "folkard",monospace,sans-serif;
+    src: url(/assets/fonts/Folkard.woff2);
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: gray;
 }
 
-header , footer{
-    background-color: rgba(1, 1, 0, 0.974);
-    color:rgba(150, 80, 0, 0.9) ;
-    
+header,
+footer {
+    background-color: rgba(1, 1, 0, 0.714);    
     text-align: center;
     padding: 20px;
 }
 
-header a , footer a{
-    color: whitesmoke;
-    text-decoration: none;
+h2{
+    font-family: folkard;
 }
 
-header ul{
+h3{
+    font-family: folkard;
+}
+
+/* header */
+
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,600px);   
+    font-family: folkard;    
+    color: rgb(198, 176, 15);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.banner-right{
+
+    box-sizing: border-box;
+}
+
+header h1{
+    box-sizing: border-box;
+    font-size: 45px;
+    font-family: folkard;
+    color: rgb(197, 105, 0);
+}
+
+header p{
+    margin: 0px;
+}
+
+header a{
+    color: rgb(198, 176, 15);
+    text-decoration: none;  
+    font-size: large;  
+}
+header nav{    
+    align-content: center;
+}
+
+.navbar-toggler{
+    color: white;    
+    background-color: rgb(197, 105, 0);
+    border: 2px solid rgb(81, 29, 2);
+    padding: 6px 10px;
+    border-radius: 120px 120px 120px 120px / 95px 95px 95px 95px;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: right;    
     list-style: none;
 }
 
 /* main */
 
-img{
+img {
     width: 250px;
     height: 250px;
 }
 
 
 
-main{
+main {
     max-width: 1200px;
     padding: 20px;
     margin: 0 auto;
 }
 
 
-.intro-index{
+.intro-index {
     border: 1px solid goldenrod;
     padding: 20px;
     margin: 20px;
 }
 
-section{
-    
+section {
+
     margin-bottom: 20px;
     padding: 20px;
-    background-color:rgba(223, 223, 223, 0.725);
-    border-radius: 10px ;
-    
+    background-color: rgba(223, 223, 223, 0.725);
+    border-radius: 10px;
+
 }
 
 /* main categories */
 
-.categories{
+.categories {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.categories div{
+.categories div {
     width: 150px;
     height: auto;
     margin: 20px;
     border: 2px solid gray;
     background-color: black;
-    color: rgba(150, 80, 0, 0.9);
+    color: rgb(197, 105, 0);
     border-radius: 10px;
     text-align: center;
 }
 
-.categories div img{
+.categories div img {
     width: 146px;
     height: 145px;
     border-radius: 7px 7px 0px 0px;
-   
+
 }
-.categories p{
+
+.categories p {
     padding: 10px;
 }
 
 /* formulaires */
 
-form{
+form {
     background-color: black;
-    color: rgba(150, 80, 0, 0.9) ;
+    color: rgb(198, 176, 15);
     padding: 20px;
     max-width: 500px;
     margin: 0 auto;
     border: 1px solid gray;
-    border-radius:15px ;
+    border-radius: 15px;
     text-align: center;
 }
 
-form fieldset{
-     border: 1px solid gray;
-     padding: 50px;
-     margin-bottom: 20px;
-     border-radius: 4px;
+form fieldset {
+    border: 1px solid gray;
+    padding: 50px;
+    margin-bottom: 20px;
+    border-radius: 4px;
 
 }
 
-form legend{
+form legend {
     font-weight: 600;
     padding: 5px;
 }
 
-form div{
-padding-bottom: 20px;
+form div {
+    padding-bottom: 20px;
 }
 
-form label{
+form label {
     font-weight: 600;
     padding-bottom: 20px;
 }
 
-.fieldset-perso label , #label-pays{
+.fieldset-perso label,
+#label-pays {
     display: block;
     margin-bottom: 10px;
 }
 
-.fieldset-perso input, form select, form textarea{
+.fieldset-perso input,
+form select,
+form textarea {
     width: 100%;
     padding: 7px;
     border: 1px solid gray;
     border-radius: 4px;
 }
 
-#nom{
+#nom {
     border: 2px dashed red;
 }
 
-.info-sup input{
-    margin-right: 5px ;
+.info-sup input {
+    margin-right: 5px;
 }
 
 /* boutons */
 
-button{
+button {
     background-color: rgba(150, 80, 0, 0.9);
     color: white;
     padding: 5px 15px 5px 15px;
     margin: 15px 0;
-    border-radius: 120px 120px 120px 120px / 95px 95px 95px 95px;;
+    border-radius: 120px 120px 120px 120px / 95px 95px 95px 95px;
     cursor: pointer;
     border: none;
 }
 
-button:hover{
+button:hover {
     background-color: darkgoldenrod;
     font-size: 15px;
 }
 
-button:focus{
+button:focus {
     background-color: olive;
 }
 
-button:active{
-    border : 2px solid grey;
+button:active {
+    border: 2px solid grey;
     font-size: 10px;
 }
 
+.scroll-top{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+
 /* tableaux */
 
-.table-container{
+.table-container {
     border: 2px solid grey;
     border-radius: 10px;
     overflow-x: auto;
 }
 
-table{
-    border-collapse: collapse ;
-    width: 100%;   
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
 
-th, td{
+th,
+td {
     border: 2px solid grey;
     text-align: center;
     padding: 5px;
-    
-}
-thead{
-    background-color: black;
-    color:rgba(150, 80, 0, 0.9) ;
-    
+
 }
 
-table img{
-     width: 100px;
+thead {
+    background-color: black;
+    color: rgb(198, 176, 15);
+
+}
+
+table img {
+    width: 100px;
     height: 100px;
     padding: 5px;
 }
+
 /* input / textarea*/
 
-input:focus{
+input:focus {
     border: 2px solid saddlebrown;
     outline: none;
     font-size: 15px;
 }
-textarea:focus{
+
+textarea:focus {
     border: 2px solid saddlebrown;
     outline: none;
     font-size: 15px;
@@ -214,43 +293,71 @@ textarea:focus{
 
 /* produits */
 
-.product-container{
+.product-container {    
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-article{
-    max-width: 300px;
+.product-card{
+    position: relative;
+}
+
+.badge{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgb(98, 0, 0);
+    color: rgb(200, 197, 197);
+    padding: 5px;
+    font-weight: 900;
+    border-radius: 5px;  
+}
+
+article {    
+    width: 300px;
     height: auto;
     padding: 20px;
     margin: 20px;
     background-color: black;
-    color: rgba(150, 80, 0, 0.9);
+    color: rgb(198, 176, 15);
     border-radius: 10px;
     text-align: center;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-article h3{
-    margin: 10px 0;
+.ogma{
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.ogma:hover{
+    text-decoration: none;
+}
+
+article h3 {
+    margin: 15px 0;
     color: rgb(192, 180, 149);
     font-size: x-large;
     font-weight: bold;
 }
 
-article p{
+article p {
     margin: 10px 0;
 }
 
-.price{
-    color: brown;
+.price {
+    color: rgb(197, 105, 0);
     font-weight: 900;
     font-size: large;
 
 }
 
-article img{
+article img {
     border: 1px solid burlywood;
     border-radius: 10px;
     padding: 5px;
@@ -258,62 +365,90 @@ article img{
     height: 200px;
 }
 
-article p span{
-    color: yellow;
+article p span {
+    color: rgb(197, 105, 0);
     font-size: 20px;
     font-weight: bolder;
 }
 
+/* carousel */
+
+.carousel-inner{
+    background-color: black;
+    width: 50%;
+    margin: 0 auto;
+    
+}
+.carousel.slide{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.carousel-item.active img{
+    margin: 0 auto;
+    width: 290px;
+    
+}
+
+.carousel-caption.d-none.d-md-block{
+    
+}
+
+
+
+
 /* footer */
 
-footer{
+footer {
     padding: 50px;
 }
 
-.container-footer{
+.container-footer {
     display: flex;
     flex-wrap: wrap;
 }
-.container-footer div{
+
+.container-footer div {
     display: flex;
     margin: 0 auto;
     align-items: center;
 }
 
 
-footer i{
-    color:rgba(150, 80, 0, 0.9) ;
+.link-icons i {
+    color: rgba(150, 80, 0, 0.9);
     font-size: 30px;
-    
+
 }
 
-footer a{
+footer a {
     padding: 10px;
     font-size: 20px;
-    color: rgba(150, 80, 0, 0.9);
+    color: rgb(198, 176, 15);
 }
 
-footer p{
+footer p {
     padding: 10px;
+    color: rgb(198, 176, 15);
+
 }
 
-i:hover{
-    color:darkgoldenrod ;
+.link-icons i:hover {
+    color: darkgoldenrod;
 }
 
-i:active{
+.link-icons i:active {
     color: olive;
     font-size: 25px;
 }
 
-a:hover{
+a:hover {
     color: darkgoldenrod;
     text-decoration: underline;
 }
 
-a:focus{
+a:focus {
     color: olive;
     border: 1px solid olive;
     font-size: 15px;
 }
-

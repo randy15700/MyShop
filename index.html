@@ -4,46 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>accueil</title>
+    <meta name="description" content="myshop, votre boutique en ligne de vente de produits dérivés ( vêtements, accessoires, déco) pour les fans de Kaamelott. ">
+    <meta name="robots" content="index, follow">
+    <title>My Shop - Boutique de produits dérivés Kaamelott</title>
     <!-- lien font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <!-- lien bootstrap -->
+     
 </head>
 
 <body>
 
     <header>
-        <h1>My Shop</h1>
-        <p>Chez nous, on expédie plus vite qu' un pet sur une plaque de verglas!</p>
-
-        <nav>
-            <ul class="nav">
-                <li>
-                    <a href="index.html">accueil</a>
-                </li>
-                <li>
-                    <a href="pages/about.html">à-propos</a>
-                </li>
-                <li>
-                    <a href="pages/products.html">produits</a>
-                </li>
-                <li>
-                    <a href="pages/SignUp.html">inscription</a>
-                </li>
-                <li>
-                    <a href="pages/SignIn.html">connexion</a>
-                </li>
-                <li>
-                    <a href="pages/contact.html">contact</a>
-                </li>
-                <li>
-                    <a href="pages/cart.html">Panier</a>
-                </li>
-            </ul>
+        <div class="banner-right">            
+            <h1>My Shop</h1>            
+            <p>Chez nous, on expédie plus vite qu' un pet sur une plaque de verglas!</p>
+        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="nav navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/about.html">A propos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/products.html">Produits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/signup.html">Inscription</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/signin.html">Connexion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/cart.html">Panier</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
+       
     </header>
 
-    <main>
+    <main id="main">
         <section class="intro-index">
 
             <h2>Bienvenue sur notre boutique</h2>
@@ -84,16 +100,17 @@
         <section>
             <h2 id="products">Nos Produits</h2>
             <div class="product-container">
-                <article>
+                <!-- <article class="product-important">
+                    <span class="badge">promo</span>
                     <h3>Médaillon d' Ogma</h3>
                     <p>Ce produit est <span>fortement recommandé</span> par nos clients</p>
                     <img src="assets/images/medaillon-ogma.jpg" alt="médaillon d'ogma">
-                    <p>Médaillon magique de notre souverain, rain rain!</p>
-                    <p class="price">prix 20 e </p>
+                    <p id="descriptionP1">Médaillon magique de notre souverain, rain rain!</p>
+                    <p class="price">prix 26 e </p>
                     <button type="button">acheter</button>
                 </article>
 
-                <article>
+                <article class="product-important">
                     <h3>Bavoir</h3>
                     <img src="assets/images/bavoir-couillère.webp" alt="Bavoir couillère">
                     <p>Votre enfant a failli s' étouffer avec un os de caille et a gerbé partout, on a ce qu' il lui
@@ -103,75 +120,79 @@
                     <button type="button">acheter</button>
                 </article>
 
-                <article>
+                <article class="product-important">
                     <h3>Graal</h3>
                     <img src="assets/images/graal.webp" alt="graal">
                     <p>Non, le graal n' est ni un bocal à anchois, ni une pierre incandescante, mais bien un verre à
                         bière.
                     </p>
-                    <p class="price">prix 15 e </p>
+                    <h4><p class="price">prix 55 e </p></h4>
                     <button type="button">acheter</button>
-                </article>
+                </article> -->
             </div>
             <div class="table-container">
-            <table>
-                <!-- <caption>Liste des produits</caption> -->
-                
-                <thead>
-                    <tr>
-                        <th id="1">Catégories</th>
-                        <th>Produit</th>
-                        <th>Image</th>
-                        <th>Description</th>
-                        <th>Prix</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="2">Hommes</td>
-                        <td>médaillon d' Ogma</td>
-                        <td>
-                            <img src="/assets/images/medaillon-ogma.jpg" alt="médaillon d'ogma" style="width: 100px;">
-                        </td>
-                        <td>Médaillon magique de notre souverain, rain rain!</td>
-                        <td>20 e </td>
-                        <td>
-                            <button type="button">acheter</button>
-                        </td>
-                    </tr>
+                <table>
+                    <!-- <caption>Liste des produits</caption> -->
 
-                    <tr>
-                        <td>Graal</td>
-                        <td><img src="assets/images/graal.webp" alt="graal" style="width: 100px;"></td>
-                        <td>Non, le graal n' est ni un bocal à anchois, ni une pierre incandescante, mais bien un verre
-                            à
-                            bière.</td>
-                        <td>15 e </td>
-                        <td>
-                            <button type="button">acheter</button>
-                        </td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>Catégories</th>
+                            <th>Produit</th>
+                            <th>Image</th>
+                            <th>Description</th>
+                            <th>Prix</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Hommes</td>
+                            <td>médaillon d' Ogma</td>
+                            <td>
+                                <img src="/assets/images/medaillon-ogma.jpg" alt="médaillon d'ogma"
+                                    style="width: 100px;">
+                            </td>
+                            <td>Médaillon magique de notre souverain, rain rain!</td>
+                            <td>20 e </td>
+                            <td>
+                                <button type="button">acheter</button>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>Enfants</td>
-                        <td>Bavoir</td>
-                        <td><img src="assets/images/bavoir-couillère.webp" alt="Bavoir couillère" style="width: 100px;">
-                        </td>
-                        <td>Votre enfant a failli s' étouffer avec un os de caille et a gerbé partout, on a ce qu' il
-                            lui faut! </td>
-                        <td>10 e </td>
-                        <td>
-                            <button type="button">acheter</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>Graal</td>
+                            <td><img src="assets/images/graal.webp" alt="graal" style="width: 100px;"></td>
+                            <td>Non, le graal n' est ni un bocal à anchois, ni une pierre incandescante, mais bien un
+                                verre
+                                à
+                                bière.</td>
+                            <td>15 e </td>
+                            <td>
+                                <button type="button">acheter</button>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>promotion</td>
-                        <td colspan="5">-20% sur tous les accessoires</td>
-                    </tr>
-                </tbody>
-            </table>
+                        <tr>
+                            <td>Enfants</td>
+                            <td>Bavoir</td>
+                            <td><img src="assets/images/bavoir-couillère.webp" alt="Bavoir couillère"
+                                    style="width: 100px;">
+                            </td>
+                            <td>Votre enfant a failli s' étouffer avec un os de caille et a gerbé partout, on a ce qu'
+                                il
+                                lui faut! </td>
+                            <td>10 e </td>
+                            <td>
+                                <button type="button">acheter</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>promotion</td>
+                            <td colspan="5">-20% sur tous les accessoires</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -180,13 +201,16 @@
             <h2>Promotion</h2>
             <p><mark>-20% sur tous les accessoires !</mark></p>
         </aside>
+
+        <button class="scroll-top"><i class="fa-solid fa-arrow-up" aria-label="Haut la page"></i>haut de page</button>
+        
     </main>
 
     <footer class="container-footer">
-        <div>
-            <a target="_blank" href="https://x.com/"><i class="fa-brands fa-square-x-twitter"></i></a>
-            <a target="_blank" href="https://www.instagram.com/"><i class="fa-brands fa-square-instagram"></i></a>
-            <a target="_blank" href="https://facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
+        <div class="link-icons">
+            <a target="_blank" href="https://x.com/" aria-label="lien X"><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a target="_blank" href="https://www.instagram.com/" aria-label="lien Instagram"><i class="fa-brands fa-square-instagram"></i></a>
+            <a target="_blank" href="https://facebook.com" aria-label="lien Facebook"><i class="fa-brands fa-square-facebook"></i></a>
         </div>
         <div>
             <a href="mailto:myshop@gmail.com"><i class="fa-solid fa-square-envelope"></i>myshop@gmail.com</a>
@@ -201,7 +225,10 @@
 
 
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+<script type="module" src="assets/js/script.js"></script>
 
 </body>
 
