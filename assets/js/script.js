@@ -1,5 +1,5 @@
-import { ajouterAuPanier } from "./service/cartService.js";
-import { getAllProducts } from "./service/productService.js";
+import { ajouterAuPanier, getPanier } from "./service/cartService.js";
+import { getAllProducts, getProductByID } from "./service/productService.js";
 
 const btnTop = document.querySelector('.scroll-top');
  if (btnTop) {
@@ -111,9 +111,51 @@ async function afficherProduits() {
 
 // création élément article
 
+async function afficherPanier() {
+    const panierBody = document.querySelector("panier-body");
 
 
+    if (!panierBody) return;
+        try {
+            const panier = await getPanier();
+            console.log(panier);
 
+            for(const elt of panier) {
+                //récupération pdt par ID
+                const produit = await getProductByID(elt.produitID)
+
+
+                const tr = document.createElement("tr");
+
+                tr.innerHTML = `
+                <td></td>
+                        <td>${elt.produitID}</td>
+                        <td>${produit.nom} </td>
+                        <td>${produit.prix}</td>
+                        <td>${elt.quantite}</td>                        
+                        <td><button type="button">supprimer</button></td>
+                `;
+
+                panierBody.appendChild(tr);
+
+            };
+
+            const trSomme = document.createElement("tr")
+
+            trSomme.innerHTML =`
+                        <td colspan="4">Total</td>
+                        <td>65 E </td>
+                        <td><button type="button">Commander</button></td>
+            `
+            panierBody.appendChild(trSomme);
+
+            
+        } catch (error) {
+            
+        }
+    }
+
+afficherPanier()
 
 afficherProduits();
 

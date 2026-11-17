@@ -9,3 +9,10 @@ export async function ajouterAuPanier(produitId) {
     });
     
 }
+
+//récupérer le panier
+
+export async function getPanier() {
+    const reponse = await axios.get(API_URL);
+    return reponse.data;
+}

@@ -38,3 +38,10 @@ export async function getAllProducts() {
     const reponse = await axios.get(API_URL);
     return reponse.data;
 }
+
+//récupérer un produit par son ID
+
+export async function getProductByID(id) {
+    const reponse = await axios.get(`${API_URL}/${id}`);
+    return reponse.data;
+}
