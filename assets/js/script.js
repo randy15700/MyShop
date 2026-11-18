@@ -42,6 +42,7 @@ async function afficherProduits() {
 // evenement au clic
     const btn = article.querySelector("button")
     btn.addEventListener("click", async function(){
+         
         try {
             await ajouterAuPanier(produit.id);
             alert("Produit ajouté au panier!", produit.id);
@@ -112,7 +113,7 @@ async function afficherProduits() {
 // création élément article
 
 async function afficherPanier() {
-    const panierBody = document.querySelector("panier-body");
+    const panierBody = document.getElementById("panier-body");
 
 
     if (!panierBody) return;
@@ -127,12 +128,12 @@ async function afficherPanier() {
 
                 const tr = document.createElement("tr");
 
-                tr.innerHTML = `
-                <td></td>
+                tr.innerHTML = `                
                         <td>${elt.produitID}</td>
                         <td>${produit.nom} </td>
                         <td>${produit.prix}</td>
-                        <td>${elt.quantite}</td>                        
+                        <td>${elt.quantite}</td>   
+                        <td>20</td>                     
                         <td><button type="button">supprimer</button></td>
                 `;
 
@@ -146,19 +147,20 @@ async function afficherPanier() {
                         <td colspan="4">Total</td>
                         <td>65 E </td>
                         <td><button type="button">Commander</button></td>
-            `
+            `;
             panierBody.appendChild(trSomme);
 
             
         } catch (error) {
+            console.log(error);
             
         }
     }
 
-afficherPanier()
+
 
 afficherProduits();
-
+afficherPanier();
 
 // fonction badge produit
 
